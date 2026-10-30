@@ -122,15 +122,15 @@
       "model_id": "deepseek-v4-pro",
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
-      "migration": "自报完成，待静默复核",
+      "migration": "迁移自报完成",
       "evaluation": "待独立验收",
       "run_id": "s1-cofi-deepseek-pro-deveco-20261030",
       "base_image": "mobile-harness-deveco-v1-20261028",
-      "result_image": null,
+      "result_image": "s1-cofi-deepseek-pro-deveco-20261030",
       "image_url": null,
-      "image_status": "待产出",
+      "image_status": "本地 Tart 结果克隆保留；远程地址待补",
       "evidence": "s1-cofi-deepseek-pro-deveco-20261030",
-      "notes": "20:58北京时间已观察到整体交付声明，保存全会话摘要基线；最早21:13:37后复查日志/活动，再归档并释放设备。自报11/11任务、13ets检查、构建安装首屏验证；未逐点击验交互，英文单语，后台/PiP/通知/声音未实现。原生首条任务仅末尾LF变空格，正文一致，偏差保留。",
+      "notes": "21:15北京时间完成15分钟全会话静默复核，归档489文件及原生日志并校验SHA；专属手机/relay/VM均已停止，保留磁盘。自报11/11任务、13ets检查、构建安装首屏验证；英文单语，后台/PiP/通知/实际声音未实现，备份限沙盒、emoji代替矢量图标，交互未逐点击验证。首条任务仅末尾LF变空格，正文一致；未独立验收。",
       "schedule_window": "北京时间 20:00–08:00 启动",
       "reused": false,
       "preflight": "passed"
@@ -159,15 +159,15 @@
       "model_id": "deepseek-flash",
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
-      "migration": "自报完成，待静默复核",
+      "migration": "迁移自报完成",
       "evaluation": "待独立验收",
       "run_id": "s1-cofi-deepseek-flash-deveco-20261030",
       "base_image": "mobile-harness-deveco-v1-20261028",
-      "result_image": null,
+      "result_image": "s1-cofi-deepseek-flash-deveco-20261030",
       "image_url": null,
-      "image_status": "待产出",
+      "image_status": "本地 Tart 结果克隆保留；远程地址待补",
       "evidence": "s1-cofi-deepseek-flash-deveco-20261030",
-      "notes": "20:58北京时间已观察到整体交付声明，保存全会话摘要基线；最早21:13:37后复查日志/活动，再归档并释放设备。自报构建安装及临时路由逐页截图，调试路由已移除；PiP/后台长时能力未接入，verify_ui因未配置多模态不可用。原生首条任务仅末尾LF变空格，正文一致，偏差保留。",
+      "notes": "21:15北京时间完成15分钟全会话静默复核，归档669文件及原生日志并校验SHA；专属手机/relay/VM均已停止，保留磁盘。自报构建安装及临时路由逐页截图，调试路由已移除；PiP/后台长时能力未接入，verify_ui因未配置多模态不可用。首条任务仅末尾LF变空格，正文一致；未独立验收。",
       "schedule_window": "北京时间 20:00–08:00 启动",
       "reused": false,
       "preflight": "passed"
@@ -228,5 +228,5 @@
     "night_policy": "仅在夜间启动预检模型调用和正式运行；跨越08:00的活动实验不强制终止",
     "reuse_historical": true
   },
-  "execution_note": "北京时间20:58：9组已完成归档或历史复用；最后DeepSeek Pro/Flash两组均已自报交付，正在等待至少15分钟的全会话静默复核，尚未归档或关闭资源。以上均不等于独立验收通过。所有prompt偏差继续保留。"
+  "execution_note": "阶段1迁移实验已收尾：11组迁移自报完成（6组历史复用+5组本批补跑）。本批五组均完成静默复核、归档SHA校验和专属资源清理，保留结果磁盘；未自动独立验收。Qwen/DevEco首条prompt重复两遍，不能视作严格同prompt对照；MiniMax及两组DeepSeek的首尾空白差异继续保留。镜像栏记录本地克隆名称，尚无已核实的远程下载地址。"
 }
