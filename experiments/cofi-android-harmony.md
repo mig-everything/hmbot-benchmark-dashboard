@@ -4,11 +4,11 @@
 
 **自报完成不代表独立验收通过。** 已确认复用6组历史结果，补跑5组；当前执行状态以各行记录为准。
 
-13:02 北京时间：6组历史结果已复用；MiniMax + DevEco 自报完成，等待下一次日志静默复核与归档；Qwen + DevEco 继续运行（保留首条prompt重复偏差）。两台名额暂未释放，GPT + Codex 等待名额，DeepSeek两组待夜间预检。未声明新增独立验收通过。
+13:20 北京时间：7组迁移自报完成（6组历史复用 + MiniMax/DevEco本轮归档），未代表独立验收通过；Qwen/DevEco与GPT/Codex并行运行。DeepSeek Pro、Flash的DevEco两组仍待夜间预检。MiniMax专属资源已释放，结果磁盘保留；Qwen首条prompt重复偏差继续保留。
 
 | 模型 / ID | Harness | 迁移状态 | 独立验收 | 结果镜像（本地 Tart） | 进度备注 |
 |---|---|---|---|---|---|
-| MiniMax / MiniMax-M3 | DevEco Code 0.2.3 | 自报完成，待静默复核 | 未独立验收 | 待产出 | 13:02 北京时间明确自报整组完成，已保存根与子会话日志基线；至少15分钟后确认无新增操作再归档清理。agent自报构建、安装及14/14自检通过，未独立验收。自报限制：PiP未实现、仅中英两语、未移植Wear OS，波浪环采用近似实现。原生首条prompt仅首尾空白差异。 日间优先 |
+| MiniMax / MiniMax-M3 | DevEco Code 0.2.3 | 迁移自报完成 | 待独立验收 | `s1-cofi-minimax-deveco-20261030` · 远程地址待补 | 13:17 后确认全部会话日志静默，归档693个文件并校验SHA；专属手机、relay与Tart已关闭，保留磁盘。agent自报14/14自检通过，未独立验收。自报限制包括PiP未实现、仅中英两语、未移植Wear OS及波浪环近似。首条prompt仅首尾空白差异。 日间优先 |
 | MiniMax / MiniMax-M3[1m] | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-minimax-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
 | Qwen / qwen3.8-max | DevEco Code 0.2.3 | 迁移中（提交偏差） | 待迁移结束；存在 prompt 偏差 | 待产出 | 13:02 北京时间只读检查：进程存活，正在搭建鸿蒙工程，agent任务清单1/11（不是整体完成率）。首条消息误含两遍相同原始prompt；本轮不属于严格同prompt对照，保留运行和偏差证据，不自动纠正或重跑。 日间优先 |
 | Qwen / qwen3.8-max | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-qwen-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
@@ -18,7 +18,7 @@
 | DeepSeek Pro / deepseek-v4-pro | Claude Code 2.1.267 | 迁移自报完成 | 待独立验收 | `cofi-harmony-deepseek-pro-retest-20261028` · 远程地址待补 | 采用 10/28 重测；10/26 旧版测试结果不混入。 历史结果已复用 |
 | DeepSeek Flash / deepseek-flash | DevEco Code 0.2.3 | 待运行 | 待迁移 | 待产出 | 模型 ID 暂沿用历史命名，启动前验证并锁定。 北京时间 20:00–08:00 启动 |
 | DeepSeek Flash / deepseek-flash | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-deepseek-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
-| GPT / gpt-6-astra | Codex CLI 0.162.1 | 待运行 | 待迁移 | 待产出 | 预检通过，等待并行名额后从可见 Terminal 启动。ChatGPT 登录；实际默认 medium，显式 high。 日间优先 |
+| GPT / gpt-6-astra | Codex CLI 0.162.1 | 迁移中 | 待迁移结束 | 待产出 | 13:19:58 北京时间从可见Terminal单次启动；原生turn_context核实gpt-6-astra/high，首条prompt SHA精确一致。ChatGPT个人登录，已开始分析源码。 日间优先 |
 
 ## 实验口径与待锁定项
 
