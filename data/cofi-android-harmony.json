@@ -12,15 +12,15 @@
       "model_id": "MiniMax-M3",
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
-      "migration": "迁移中",
-      "evaluation": "待迁移结束",
+      "migration": "自报完成，待静默复核",
+      "evaluation": "未独立验收",
       "run_id": "s1-cofi-minimax-deveco-20261030",
       "base_image": "mobile-harness-deveco-v1-20261028",
       "result_image": null,
       "image_url": null,
-      "image_status": "待产出",
+      "image_status": "已自报交付，待归档核验",
       "evidence": "s1-cofi-minimax-deveco-20261030",
-      "notes": "12:39 北京时间只读检查：正在实现应用页面、组件和数据层，已有构建探测；尚未自报整个任务完成。原生首条 prompt 与审阅稿仅首尾空白差异。",
+      "notes": "13:02 北京时间明确自报整组完成，已保存根与子会话日志基线；至少15分钟后确认无新增操作再归档清理。agent自报构建、安装及14/14自检通过，未独立验收。自报限制：PiP未实现、仅中英两语、未移植Wear OS，波浪环采用近似实现。原生首条prompt仅首尾空白差异。",
       "schedule_window": "日间优先",
       "reused": false,
       "preflight": "passed"
@@ -57,7 +57,7 @@
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-qwen-deveco-20261030",
-      "notes": "12:39 北京时间只读检查：进程存活、继续分析源码，尚无输出产物。首条消息误含两遍相同原始 prompt；本轮不属于严格同 prompt 对照，保留运行和偏差证据，不自动纠正或重跑。",
+      "notes": "13:02 北京时间只读检查：进程存活，正在搭建鸿蒙工程，agent任务清单1/11（不是整体完成率）。首条消息误含两遍相同原始prompt；本轮不属于严格同prompt对照，保留运行和偏差证据，不自动纠正或重跑。",
       "schedule_window": "日间优先",
       "reused": false,
       "preflight": "passed"
@@ -226,5 +226,5 @@
     "night_policy": "仅在夜间启动预检模型调用和正式运行；跨越08:00的活动实验不强制终止",
     "reuse_historical": true
   },
-  "execution_note": "12:39 北京时间已核实：6组历史结果已复用，MiniMax + DevEco 与 Qwen + DevEco 运行中（Qwen首条prompt重复，保留协议偏差），GPT + Codex 等待名额，DeepSeek两组待夜间预检。当前未声明独立验收通过。"
+  "execution_note": "13:02 北京时间：6组历史结果已复用；MiniMax + DevEco 自报完成，等待下一次日志静默复核与归档；Qwen + DevEco 继续运行（保留首条prompt重复偏差）。两台名额暂未释放，GPT + Codex 等待名额，DeepSeek两组待夜间预检。未声明新增独立验收通过。"
 }
