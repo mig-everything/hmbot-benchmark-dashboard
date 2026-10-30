@@ -12,15 +12,15 @@
       "model_id": "MiniMax-M3",
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
-      "migration": "待首次启动配置",
-      "evaluation": "待迁移",
+      "migration": "迁移中",
+      "evaluation": "待迁移结束",
       "run_id": "s1-cofi-minimax-deveco-20261030",
       "base_image": "mobile-harness-deveco-v1-20261028",
       "result_image": null,
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-minimax-deveco-20261030",
-      "notes": "已获授权并确认项目目录信任；随后出现首次 DevEco Studio 路径配置，尚无模型迁移会话。等待启动配置例外授权。",
+      "notes": "已获授权完成首次配置；12:15 北京时间进入模型会话。原生首条 prompt 与审阅稿仅首尾空白差异，正在自主分析源码。",
       "schedule_window": "日间优先",
       "reused": false,
       "preflight": "passed"
@@ -49,15 +49,15 @@
       "model_id": "qwen3.8-max",
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
-      "migration": "待运行",
-      "evaluation": "待迁移",
+      "migration": "迁移中（提交偏差）",
+      "evaluation": "待迁移结束；存在 prompt 偏差",
       "run_id": "s1-cofi-qwen-deveco-20261030",
       "base_image": "mobile-harness-deveco-v1-20261028",
       "result_image": null,
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-qwen-deveco-20261030",
-      "notes": "模型、文件、shell 与设备预检通过，图形窗口已核实；正式迁移尚未启动。使用用户指定网关。",
+      "notes": "12:18 北京时间进入模型会话。首条消息误含两遍相同原始 prompt（原生日志已核实）；本轮不属于严格同 prompt 对照，保留运行和偏差证据，不自动纠正或重跑。",
       "schedule_window": "日间优先",
       "reused": false,
       "preflight": "passed"
@@ -226,5 +226,5 @@
     "night_policy": "仅在夜间启动预检模型调用和正式运行；跨越08:00的活动实验不强制终止",
     "reuse_historical": true
   },
-  "execution_note": "复用6组历史结果；桌面控制已恢复。MiniMax + DevEco 已确认目录信任，等待首次启动配置；Qwen + DevEco 待正式启动，GPT + Codex 等待并行名额；DeepSeek两组待北京时间夜间预检。"
+  "execution_note": "复用6组历史结果；MiniMax + DevEco、Qwen + DevEco 已进入自主迁移（Qwen首条prompt重复，明确保留协议偏差）。GPT + Codex 等待名额；DeepSeek两组待北京时间夜间预检。"
 }
