@@ -12,7 +12,7 @@
       "model_id": "MiniMax-M3",
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
-      "migration": "待目录信任",
+      "migration": "待首次启动配置",
       "evaluation": "待迁移",
       "run_id": "s1-cofi-minimax-deveco-20261030",
       "base_image": "mobile-harness-deveco-v1-20261028",
@@ -20,7 +20,7 @@
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-minimax-deveco-20261030",
-      "notes": "桌面控制已恢复；可见 Terminal 中已启动 harness，停在首次项目目录信任，尚无模型迁移会话。已请求仅限该启动提示的授权。",
+      "notes": "已获授权并确认项目目录信任；随后出现首次 DevEco Studio 路径配置，尚无模型迁移会话。等待启动配置例外授权。",
       "schedule_window": "日间优先",
       "reused": false,
       "preflight": "passed"
@@ -226,5 +226,5 @@
     "night_policy": "仅在夜间启动预检模型调用和正式运行；跨越08:00的活动实验不强制终止",
     "reuse_historical": true
   },
-  "execution_note": "复用6组历史结果；桌面控制已恢复。MiniMax + DevEco 等待首次目录信任，Qwen + DevEco 待正式启动，GPT + Codex 等待并行名额；DeepSeek两组待北京时间夜间预检。"
+  "execution_note": "复用6组历史结果；桌面控制已恢复。MiniMax + DevEco 已确认目录信任，等待首次启动配置；Qwen + DevEco 待正式启动，GPT + Codex 等待并行名额；DeepSeek两组待北京时间夜间预检。"
 }

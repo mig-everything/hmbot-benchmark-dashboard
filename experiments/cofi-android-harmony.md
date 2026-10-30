@@ -4,11 +4,11 @@
 
 **自报完成不代表独立验收通过。** 已确认复用6组历史结果，补跑5组；当前执行状态以各行记录为准。
 
-复用6组历史结果；桌面控制已恢复。MiniMax + DevEco 等待首次目录信任，Qwen + DevEco 待正式启动，GPT + Codex 等待并行名额；DeepSeek两组待北京时间夜间预检。
+复用6组历史结果；桌面控制已恢复。MiniMax + DevEco 已确认目录信任，等待首次启动配置；Qwen + DevEco 待正式启动，GPT + Codex 等待并行名额；DeepSeek两组待北京时间夜间预检。
 
 | 模型 / ID | Harness | 迁移状态 | 独立验收 | 结果镜像（本地 Tart） | 进度备注 |
 |---|---|---|---|---|---|
-| MiniMax / MiniMax-M3 | DevEco Code 0.2.3 | 待目录信任 | 待迁移 | 待产出 | 桌面控制已恢复；可见 Terminal 中已启动 harness，停在首次项目目录信任，尚无模型迁移会话。已请求仅限该启动提示的授权。 日间优先 |
+| MiniMax / MiniMax-M3 | DevEco Code 0.2.3 | 待首次启动配置 | 待迁移 | 待产出 | 已获授权并确认项目目录信任；随后出现首次 DevEco Studio 路径配置，尚无模型迁移会话。等待启动配置例外授权。 日间优先 |
 | MiniMax / MiniMax-M3[1m] | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-minimax-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
 | Qwen / qwen3.8-max | DevEco Code 0.2.3 | 待运行 | 待迁移 | 待产出 | 模型、文件、shell 与设备预检通过，图形窗口已核实；正式迁移尚未启动。使用用户指定网关。 日间优先 |
 | Qwen / qwen3.8-max | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-qwen-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
