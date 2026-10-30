@@ -20,7 +20,7 @@
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-minimax-deveco-20261030",
-      "notes": "已获授权完成首次配置；12:15 北京时间进入模型会话。原生首条 prompt 与审阅稿仅首尾空白差异，正在自主分析源码。",
+      "notes": "12:39 北京时间只读检查：正在实现应用页面、组件和数据层，已有构建探测；尚未自报整个任务完成。原生首条 prompt 与审阅稿仅首尾空白差异。",
       "schedule_window": "日间优先",
       "reused": false,
       "preflight": "passed"
@@ -57,7 +57,7 @@
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-qwen-deveco-20261030",
-      "notes": "12:18 北京时间进入模型会话。首条消息误含两遍相同原始 prompt（原生日志已核实）；本轮不属于严格同 prompt 对照，保留运行和偏差证据，不自动纠正或重跑。",
+      "notes": "12:39 北京时间只读检查：进程存活、继续分析源码，尚无输出产物。首条消息误含两遍相同原始 prompt；本轮不属于严格同 prompt 对照，保留运行和偏差证据，不自动纠正或重跑。",
       "schedule_window": "日间优先",
       "reused": false,
       "preflight": "passed"
@@ -226,5 +226,5 @@
     "night_policy": "仅在夜间启动预检模型调用和正式运行；跨越08:00的活动实验不强制终止",
     "reuse_historical": true
   },
-  "execution_note": "复用6组历史结果；MiniMax + DevEco、Qwen + DevEco 已进入自主迁移（Qwen首条prompt重复，明确保留协议偏差）。GPT + Codex 等待名额；DeepSeek两组待北京时间夜间预检。"
+  "execution_note": "12:39 北京时间已核实：6组历史结果已复用，MiniMax + DevEco 与 Qwen + DevEco 运行中（Qwen首条prompt重复，保留协议偏差），GPT + Codex 等待名额，DeepSeek两组待夜间预检。当前未声明独立验收通过。"
 }
