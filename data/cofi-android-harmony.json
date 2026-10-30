@@ -1,5 +1,5 @@
 {
-  "title": "Cofi · Android → HarmonyOS",
+  "title": "阶段1-所有model harness组合的A2H实验",
   "updated": "2026-10-30",
   "timezone": "Asia/Shanghai",
   "scope": "5 models × 2 harnesses + Codex/GPT",
@@ -9,18 +9,21 @@
     {
       "id": "minimax-deveco",
       "model_family": "MiniMax",
-      "model_id": "MiniMax-M3[1m]",
+      "model_id": "MiniMax-M3",
       "harness": "DevEco Code",
-      "harness_version": "待锁定",
+      "harness_version": "0.2.3",
       "migration": "待运行",
       "evaluation": "待迁移",
-      "run_id": null,
-      "base_image": null,
+      "run_id": "s1-cofi-minimax-deveco-20261030",
+      "base_image": "mobile-harness-deveco-v1-20261028",
       "result_image": null,
       "image_url": null,
       "image_status": "待产出",
-      "evidence": null,
-      "notes": "模型 ID 暂沿用历史命名，启动前验证并锁定。"
+      "evidence": "s1-cofi-minimax-deveco-20261030",
+      "notes": "模型文本、读文件、shell 和独立手机 Demo 预检通过；待桌面控制恢复后从可见 Terminal 启动，正式迁移尚未开始。",
+      "schedule_window": "日间优先",
+      "reused": false,
+      "preflight": "passed"
     },
     {
       "id": "minimax-claude",
@@ -36,23 +39,28 @@
       "image_url": null,
       "image_status": "本地 Tart 克隆已核实；远程地址待补",
       "evidence": "cofi-harmony-pro-minimax-20261026",
-      "notes": "历史结果；新一轮是否复用或重测待锁定。"
+      "notes": "已确认复用历史结果。",
+      "schedule_window": "历史结果已复用",
+      "reused": true
     },
     {
       "id": "qwen-deveco",
       "model_family": "Qwen",
       "model_id": "qwen3.8-max",
       "harness": "DevEco Code",
-      "harness_version": "待锁定",
+      "harness_version": "0.2.3",
       "migration": "待运行",
       "evaluation": "待迁移",
-      "run_id": null,
-      "base_image": null,
+      "run_id": "s1-cofi-qwen-deveco-20261030",
+      "base_image": "mobile-harness-deveco-v1-20261028",
       "result_image": null,
       "image_url": null,
       "image_status": "待产出",
-      "evidence": null,
-      "notes": "模型 ID 暂沿用历史命名，启动前验证并锁定。"
+      "evidence": "s1-cofi-qwen-deveco-20261030",
+      "notes": "模型文本、读文件、shell 和独立手机 Demo 预检通过；待桌面控制恢复后从可见 Terminal 启动，正式迁移尚未开始。 使用用户指定网关；先前普通百炼凭据 401 已在新配置下解决。",
+      "schedule_window": "日间优先",
+      "reused": false,
+      "preflight": "passed"
     },
     {
       "id": "qwen-claude",
@@ -68,7 +76,9 @@
       "image_url": null,
       "image_status": "本地 Tart 克隆已核实；远程地址待补",
       "evidence": "cofi-harmony-comparison-20261026",
-      "notes": "历史结果；新一轮是否复用或重测待锁定。"
+      "notes": "已确认复用历史结果。",
+      "schedule_window": "历史结果已复用",
+      "reused": true
     },
     {
       "id": "glm-deveco",
@@ -84,7 +94,9 @@
       "image_url": null,
       "image_status": "本地 Tart 克隆已核实；远程地址待补",
       "evidence": "cofi-deveco-pro-20261029",
-      "notes": "目录中的 pro 为旧名称，实际模型为 GLM。"
+      "notes": "目录中的 pro 为旧名称，实际模型为 GLM。",
+      "schedule_window": "历史结果已复用",
+      "reused": true
     },
     {
       "id": "glm-claude",
@@ -100,23 +112,27 @@
       "image_url": null,
       "image_status": "本地 Tart 克隆已核实；远程地址待补",
       "evidence": "cofi-harmony-glm-20261026",
-      "notes": "历史结果；新一轮是否复用或重测待锁定。"
+      "notes": "已确认复用历史结果。",
+      "schedule_window": "历史结果已复用",
+      "reused": true
     },
     {
       "id": "deepseek-pro-deveco",
       "model_family": "DeepSeek Pro",
       "model_id": "deepseek-v4-pro",
       "harness": "DevEco Code",
-      "harness_version": "待锁定",
+      "harness_version": "0.2.3",
       "migration": "待运行",
       "evaluation": "待迁移",
       "run_id": null,
-      "base_image": null,
+      "base_image": "mobile-harness-deveco-v1-20261028",
       "result_image": null,
       "image_url": null,
       "image_status": "待产出",
       "evidence": null,
-      "notes": "模型 ID 暂沿用历史命名，启动前验证并锁定。"
+      "notes": "模型 ID 暂沿用历史命名，启动前验证并锁定。",
+      "schedule_window": "北京时间 20:00–08:00 启动",
+      "reused": false
     },
     {
       "id": "deepseek-pro-claude",
@@ -132,23 +148,27 @@
       "image_url": null,
       "image_status": "本地 Tart 克隆已核实；远程地址待补",
       "evidence": "cofi-harmony-deepseek-pro-retest-20261028",
-      "notes": "采用 10/28 重测；10/26 旧版测试结果不混入。"
+      "notes": "采用 10/28 重测；10/26 旧版测试结果不混入。",
+      "schedule_window": "历史结果已复用",
+      "reused": true
     },
     {
       "id": "deepseek-flash-deveco",
       "model_family": "DeepSeek Flash",
       "model_id": "deepseek-flash",
       "harness": "DevEco Code",
-      "harness_version": "待锁定",
+      "harness_version": "0.2.3",
       "migration": "待运行",
       "evaluation": "待迁移",
       "run_id": null,
-      "base_image": null,
+      "base_image": "mobile-harness-deveco-v1-20261028",
       "result_image": null,
       "image_url": null,
       "image_status": "待产出",
       "evidence": null,
-      "notes": "模型 ID 暂沿用历史命名，启动前验证并锁定。"
+      "notes": "模型 ID 暂沿用历史命名，启动前验证并锁定。",
+      "schedule_window": "北京时间 20:00–08:00 启动",
+      "reused": false
     },
     {
       "id": "deepseek-flash-claude",
@@ -164,23 +184,47 @@
       "image_url": null,
       "image_status": "本地 Tart 克隆已核实；远程地址待补",
       "evidence": "cofi-harmony-comparison-20261026",
-      "notes": "历史结果；新一轮是否复用或重测待锁定。"
+      "notes": "已确认复用历史结果。",
+      "schedule_window": "历史结果已复用",
+      "reused": true
     },
     {
       "id": "gpt-codex",
       "model_family": "GPT",
-      "model_id": "待确定准确型号与 reasoning effort",
+      "model_id": "gpt-6-astra",
       "harness": "Codex CLI",
-      "harness_version": "待锁定",
+      "harness_version": "0.162.1",
       "migration": "待运行",
       "evaluation": "待迁移",
-      "run_id": null,
-      "base_image": null,
+      "run_id": "s1-cofi-gpt-codex-20261030",
+      "base_image": "mobile-harness-codex-chatgpt-v1-20261030",
       "result_image": null,
       "image_url": null,
       "image_status": "待产出",
-      "evidence": null,
-      "notes": "独立对照组；已有 Codex + GLM 不计入此组。"
+      "evidence": "s1-cofi-gpt-codex-20261030",
+      "notes": "模型文本、读文件、shell 和独立手机 Demo 预检通过；待桌面控制恢复后从可见 Terminal 启动，正式迁移尚未开始。 ChatGPT 登录；实际默认 medium，显式 high。",
+      "schedule_window": "日间优先",
+      "reused": false,
+      "auth_method": "chatgpt",
+      "reasoning_effort_policy": "默认 medium；按用户要求显式 high",
+      "preflight": "passed",
+      "reasoning_effort": "high",
+      "model_default_reasoning_effort": "medium"
     }
-  ]
+  ],
+  "stage": 1,
+  "schedule": {
+    "timezone": "Asia/Shanghai",
+    "max_parallel_tart": 2,
+    "night_model_families": [
+      "DeepSeek Pro",
+      "DeepSeek Flash",
+      "GLM"
+    ],
+    "night_start": "20:00",
+    "night_end": "08:00",
+    "night_policy": "仅在夜间启动预检模型调用和正式运行；跨越08:00的活动实验不强制终止",
+    "reuse_historical": true
+  },
+  "execution_note": "复用6组历史结果。3组完成预检但正式迁移未启动，等待桌面控制恢复；DeepSeek两组待北京时间夜间预检。"
 }
