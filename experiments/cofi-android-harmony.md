@@ -4,13 +4,13 @@
 
 **自报完成不代表独立验收通过。** 已确认复用6组历史结果，补跑5组；当前执行状态以各行记录为准。
 
-13:47 北京时间：7组迁移自报完成（6组历史复用及已归档的MiniMax/DevEco）；GPT/Codex刚自报完成，等待下一次静默复核及归档；Qwen/DevEco继续运行。上述自报不等于独立验收。DeepSeek Pro、Flash的DevEco两组待夜间预检；Qwen首条prompt重复偏差保留。
+14:02 北京时间：8组迁移自报完成（6组历史复用，MiniMax/DevEco及GPT/Codex已归档并释放资源）；Qwen/DevEco自报完成待静默复核，保留首条prompt重复偏差。上述状态不等于独立验收。DeepSeek Pro、Flash的DevEco两组待夜间预检。
 
 | 模型 / ID | Harness | 迁移状态 | 独立验收 | 结果镜像（本地 Tart） | 进度备注 |
 |---|---|---|---|---|---|
 | MiniMax / MiniMax-M3 | DevEco Code 0.2.3 | 迁移自报完成 | 待独立验收 | `s1-cofi-minimax-deveco-20261030` · 远程地址待补 | 13:17 后确认全部会话日志静默，归档693个文件并校验SHA；专属手机、relay与Tart已关闭，保留磁盘。agent自报14/14自检通过，未独立验收。自报限制包括PiP未实现、仅中英两语、未移植Wear OS及波浪环近似。首条prompt仅首尾空白差异。 日间优先 |
 | MiniMax / MiniMax-M3[1m] | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-minimax-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
-| Qwen / qwen3.8-max | DevEco Code 0.2.3 | 迁移中（提交偏差） | 待迁移结束；存在 prompt 偏差 | 待产出 | 13:02 北京时间只读检查：进程存活，正在搭建鸿蒙工程，agent任务清单1/11（不是整体完成率）。首条消息误含两遍相同原始prompt；本轮不属于严格同prompt对照，保留运行和偏差证据，不自动纠正或重跑。 日间优先 |
+| Qwen / qwen3.8-max | DevEco Code 0.2.3 | 自报完成，待静默确认 | 待独立验收；存在 prompt 偏差 | 待产出 | 14:01:59 北京时间明确自报迁移完成；全部会话基线已保存，最早14:17复查后归档。自报16种语言、11张设备截图、27文件arkts_check零错误；PiP/WearOS/动态快捷方式未迁移，Material You固定色板，冻结期回前台追补。首条消息误含两遍相同原始prompt；本轮不属于严格同prompt对照，不自动纠正或重跑。 日间优先 |
 | Qwen / qwen3.8-max | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-qwen-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
 | GLM / glm-5.3 | DevEco Code 0.2.3 | 迁移自报完成 | 待独立验收 | `cofi-deveco-pro-20261029` · 远程地址待补 | 目录中的 pro 为旧名称，实际模型为 GLM。 历史结果已复用 |
 | GLM / glm-5.3[1m] | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-glm-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
@@ -18,7 +18,7 @@
 | DeepSeek Pro / deepseek-v4-pro | Claude Code 2.1.267 | 迁移自报完成 | 待独立验收 | `cofi-harmony-deepseek-pro-retest-20261028` · 远程地址待补 | 采用 10/28 重测；10/26 旧版测试结果不混入。 历史结果已复用 |
 | DeepSeek Flash / deepseek-flash | DevEco Code 0.2.3 | 待运行 | 待迁移 | 待产出 | 模型 ID 暂沿用历史命名，启动前验证并锁定。 北京时间 20:00–08:00 启动 |
 | DeepSeek Flash / deepseek-flash | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-deepseek-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
-| GPT / gpt-6-astra | Codex CLI 0.162.1 | 自报完成，待静默确认 | 待独立验收 | 待产出 | 13:47 北京时间原生 final_answer 明确交付，全部线程无活动turn/工具，已保存日志基线；至少14:02后复查无新增日志再归档清理。ArkTS + 离线ArkWeb；agent自报12核心测试、12组浏览器流程、19项设备内断言。WearOS、系统PiP、壁纸取色未迁移；通知/文件选择器未人工验收；unsigned HAP。原生gpt-6-astra/high与首条prompt SHA已核实。 日间优先 |
+| GPT / gpt-6-astra | Codex CLI 0.162.1 | 迁移自报完成 | 待独立验收 | `s1-cofi-gpt-codex-20261030` · 远程地址待补 | 14:02 北京时间完成15分钟全线程静默复核；已归档1204文件、2内部相对链接及原生日志并校验SHA；专属手机/relay/代理/VM已停止，保留磁盘。ArkTS + 离线ArkWeb；agent自报12核心测试、12组浏览器流程、19项设备内断言。WearOS、系统PiP、壁纸取色未迁移；通知/文件选择器未人工验收；unsigned HAP。gpt-6-astra/high与首条prompt SHA已核实。 日间优先 |
 
 ## 实验口径与待锁定项
 
