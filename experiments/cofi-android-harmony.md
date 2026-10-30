@@ -1,16 +1,16 @@
 # 阶段1-所有model harness组合的A2H实验
 
-实验规划 · 2026-10-30 · 11 组。历史迁移自报完成 6 组，待运行 5 组。
+实验规划 · 2026-10-30 · 11 组。历史迁移自报完成 6 组，其余 5 组状态见下表。
 
 **自报完成不代表独立验收通过。** 已确认复用6组历史结果，补跑5组；当前执行状态以各行记录为准。
 
-复用6组历史结果。3组完成预检但正式迁移未启动，等待桌面控制恢复；DeepSeek两组待北京时间夜间预检。
+复用6组历史结果；桌面控制已恢复。MiniMax + DevEco 等待首次目录信任，Qwen + DevEco 待正式启动，GPT + Codex 等待并行名额；DeepSeek两组待北京时间夜间预检。
 
 | 模型 / ID | Harness | 迁移状态 | 独立验收 | 结果镜像（本地 Tart） | 进度备注 |
 |---|---|---|---|---|---|
-| MiniMax / MiniMax-M3 | DevEco Code 0.2.3 | 待运行 | 待迁移 | 待产出 | 模型文本、读文件、shell 和独立手机 Demo 预检通过；待桌面控制恢复后从可见 Terminal 启动，正式迁移尚未开始。 日间优先 |
+| MiniMax / MiniMax-M3 | DevEco Code 0.2.3 | 待目录信任 | 待迁移 | 待产出 | 桌面控制已恢复；可见 Terminal 中已启动 harness，停在首次项目目录信任，尚无模型迁移会话。已请求仅限该启动提示的授权。 日间优先 |
 | MiniMax / MiniMax-M3[1m] | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-minimax-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
-| Qwen / qwen3.8-max | DevEco Code 0.2.3 | 待运行 | 待迁移 | 待产出 | 模型文本、读文件、shell 和独立手机 Demo 预检通过；待桌面控制恢复后从可见 Terminal 启动，正式迁移尚未开始。 使用用户指定网关；先前普通百炼凭据 401 已在新配置下解决。 日间优先 |
+| Qwen / qwen3.8-max | DevEco Code 0.2.3 | 待运行 | 待迁移 | 待产出 | 模型、文件、shell 与设备预检通过，图形窗口已核实；正式迁移尚未启动。使用用户指定网关。 日间优先 |
 | Qwen / qwen3.8-max | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-qwen-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
 | GLM / glm-5.3 | DevEco Code 0.2.3 | 迁移自报完成 | 待独立验收 | `cofi-deveco-pro-20261029` · 远程地址待补 | 目录中的 pro 为旧名称，实际模型为 GLM。 历史结果已复用 |
 | GLM / glm-5.3[1m] | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-glm-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
@@ -18,7 +18,7 @@
 | DeepSeek Pro / deepseek-v4-pro | Claude Code 2.1.267 | 迁移自报完成 | 待独立验收 | `cofi-harmony-deepseek-pro-retest-20261028` · 远程地址待补 | 采用 10/28 重测；10/26 旧版测试结果不混入。 历史结果已复用 |
 | DeepSeek Flash / deepseek-flash | DevEco Code 0.2.3 | 待运行 | 待迁移 | 待产出 | 模型 ID 暂沿用历史命名，启动前验证并锁定。 北京时间 20:00–08:00 启动 |
 | DeepSeek Flash / deepseek-flash | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-deepseek-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
-| GPT / gpt-6-astra | Codex CLI 0.162.1 | 待运行 | 待迁移 | 待产出 | 模型文本、读文件、shell 和独立手机 Demo 预检通过；待桌面控制恢复后从可见 Terminal 启动，正式迁移尚未开始。 ChatGPT 登录；实际默认 medium，显式 high。 日间优先 |
+| GPT / gpt-6-astra | Codex CLI 0.162.1 | 待运行 | 待迁移 | 待产出 | 预检通过，等待并行名额后从可见 Terminal 启动。ChatGPT 登录；实际默认 medium，显式 high。 日间优先 |
 
 ## 实验口径与待锁定项
 

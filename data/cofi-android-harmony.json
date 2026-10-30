@@ -12,7 +12,7 @@
       "model_id": "MiniMax-M3",
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
-      "migration": "待运行",
+      "migration": "待目录信任",
       "evaluation": "待迁移",
       "run_id": "s1-cofi-minimax-deveco-20261030",
       "base_image": "mobile-harness-deveco-v1-20261028",
@@ -20,7 +20,7 @@
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-minimax-deveco-20261030",
-      "notes": "模型文本、读文件、shell 和独立手机 Demo 预检通过；待桌面控制恢复后从可见 Terminal 启动，正式迁移尚未开始。",
+      "notes": "桌面控制已恢复；可见 Terminal 中已启动 harness，停在首次项目目录信任，尚无模型迁移会话。已请求仅限该启动提示的授权。",
       "schedule_window": "日间优先",
       "reused": false,
       "preflight": "passed"
@@ -57,7 +57,7 @@
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-qwen-deveco-20261030",
-      "notes": "模型文本、读文件、shell 和独立手机 Demo 预检通过；待桌面控制恢复后从可见 Terminal 启动，正式迁移尚未开始。 使用用户指定网关；先前普通百炼凭据 401 已在新配置下解决。",
+      "notes": "模型、文件、shell 与设备预检通过，图形窗口已核实；正式迁移尚未启动。使用用户指定网关。",
       "schedule_window": "日间优先",
       "reused": false,
       "preflight": "passed"
@@ -202,7 +202,7 @@
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-gpt-codex-20261030",
-      "notes": "模型文本、读文件、shell 和独立手机 Demo 预检通过；待桌面控制恢复后从可见 Terminal 启动，正式迁移尚未开始。 ChatGPT 登录；实际默认 medium，显式 high。",
+      "notes": "预检通过，等待并行名额后从可见 Terminal 启动。ChatGPT 登录；实际默认 medium，显式 high。",
       "schedule_window": "日间优先",
       "reused": false,
       "auth_method": "chatgpt",
@@ -226,5 +226,5 @@
     "night_policy": "仅在夜间启动预检模型调用和正式运行；跨越08:00的活动实验不强制终止",
     "reuse_historical": true
   },
-  "execution_note": "复用6组历史结果。3组完成预检但正式迁移未启动，等待桌面控制恢复；DeepSeek两组待北京时间夜间预检。"
+  "execution_note": "复用6组历史结果；桌面控制已恢复。MiniMax + DevEco 等待首次目录信任，Qwen + DevEco 待正式启动，GPT + Codex 等待并行名额；DeepSeek两组待北京时间夜间预检。"
 }
