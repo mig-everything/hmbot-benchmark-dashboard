@@ -122,15 +122,15 @@
       "model_id": "deepseek-v4-pro",
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
-      "migration": "迁移运行中",
-      "evaluation": "待迁移完成后独立验收",
+      "migration": "自报完成，待静默复核",
+      "evaluation": "待独立验收",
       "run_id": "s1-cofi-deepseek-pro-deveco-20261030",
       "base_image": "mobile-harness-deveco-v1-20261028",
       "result_image": null,
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-deepseek-pro-deveco-20261030",
-      "notes": "北京时间20:25:10从可见Terminal提交首条任务，原生日志核实实际模型；独立模型文本/文件/shell及专属设备Demo预检通过。每组8CPU/8GiB，两组并行。首条消息仅一份prompt，末尾LF变为空格，正文一致；保留字节差异，不重跑。当前只读监督。",
+      "notes": "20:58北京时间已观察到整体交付声明，保存全会话摘要基线；最早21:13:37后复查日志/活动，再归档并释放设备。自报11/11任务、13ets检查、构建安装首屏验证；未逐点击验交互，英文单语，后台/PiP/通知/声音未实现。原生首条任务仅末尾LF变空格，正文一致，偏差保留。",
       "schedule_window": "北京时间 20:00–08:00 启动",
       "reused": false,
       "preflight": "passed"
@@ -159,15 +159,15 @@
       "model_id": "deepseek-flash",
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
-      "migration": "迁移运行中",
-      "evaluation": "待迁移完成后独立验收",
+      "migration": "自报完成，待静默复核",
+      "evaluation": "待独立验收",
       "run_id": "s1-cofi-deepseek-flash-deveco-20261030",
       "base_image": "mobile-harness-deveco-v1-20261028",
       "result_image": null,
       "image_url": null,
       "image_status": "待产出",
       "evidence": "s1-cofi-deepseek-flash-deveco-20261030",
-      "notes": "北京时间20:22:51从可见Terminal提交首条任务，原生日志核实实际模型；独立模型文本/文件/shell及专属设备Demo预检通过。每组8CPU/8GiB，两组并行。首条消息仅一份prompt，末尾LF变为空格，正文一致；保留字节差异，不重跑。当前只读监督。",
+      "notes": "20:58北京时间已观察到整体交付声明，保存全会话摘要基线；最早21:13:37后复查日志/活动，再归档并释放设备。自报构建安装及临时路由逐页截图，调试路由已移除；PiP/后台长时能力未接入，verify_ui因未配置多模态不可用。原生首条任务仅末尾LF变空格，正文一致，偏差保留。",
       "schedule_window": "北京时间 20:00–08:00 启动",
       "reused": false,
       "preflight": "passed"
@@ -228,5 +228,5 @@
     "night_policy": "仅在夜间启动预检模型调用和正式运行；跨越08:00的活动实验不强制终止",
     "reuse_historical": true
   },
-  "execution_note": "北京时间20:26：9组迁移自报完成，非独立验收；剩余DeepSeek Pro/Flash + DevEco已完成独立预检并启动真实迁移会话，两台8CPU/8GiB Tart并行。Qwen历史双prompt偏差继续保留；本次两组仅末尾换行变空格，正文一致。"
+  "execution_note": "北京时间20:58：9组已完成归档或历史复用；最后DeepSeek Pro/Flash两组均已自报交付，正在等待至少15分钟的全会话静默复核，尚未归档或关闭资源。以上均不等于独立验收通过。所有prompt偏差继续保留。"
 }
